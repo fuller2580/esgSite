@@ -601,7 +601,7 @@ h1, h2, h3, h4, h5, h6, figure {
     content: '';
     background: #000;
     z-index: -1;
-    opacity: .3; }
+    opacity: 0; }
 
 #colorlib-testimony {
   z-index: 0; }
