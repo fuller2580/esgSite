@@ -266,10 +266,10 @@
 		   loop: true,
 		   margin: 30,
 		   responsiveClass: true,
-		   nav: true,
+		   nav: false,
 		   dots: false,
 		   autoplayHoverPause: true,
-		   smartSpeed: 500,
+		   smartSpeed: 3000,
 		   responsive:{
 		      0:{
 		         items:1
