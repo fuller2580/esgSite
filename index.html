@@ -52,7 +52,7 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	
 	</head>
 	<body>
 		
@@ -271,8 +271,8 @@
 							<div class="counter-entry">
 								<span class="icon"><i class="icon-sun"></i></span>
 								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">IDK what to put for these</span>
+									<div id="dOnlineDiv"><span class="colorlib-counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50"></span></div>
+									<span class="colorlib-counter-label">Online Members</span>
 								</div>
 							</div>
 						</div>
@@ -595,7 +595,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
+	<!-- discord information pull -->
+	<script>
+	$(document).ready(function(){
+	$.getJSON('https://discordapp.com/api/servers/107623859544408064/widget.json', function(data) {
+	console.log(data.members.length);
+	var element = document.getElementById("dOnlineDiv");
+	element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+data.members.length+' data-speed="5000" data-refresh-interval="50"></span>';
+	});
+	});
+	</script>
+	
 	</body>
 </html>
 
