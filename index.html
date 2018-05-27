@@ -280,7 +280,7 @@
 							<div class="counter-entry">
 								<span class="icon"><i class="icon-twitch"></i></span>
 								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="159" data-speed="5000" data-refresh-interval="50"></span>
+									<div id="tfCountDiv"><span class="colorlib-counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50"></span></div>
 									<span class="colorlib-counter-label">Twitch Followers</span>
 								</div>
 							</div>
@@ -607,6 +607,11 @@
 	console.log(data.members.length);
 	var element = document.getElementById("dOnlineDiv");
 	element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+data.members.length+' data-speed="5000" data-refresh-interval="50"></span>';
+	});
+	$.getJSON('https://api.twitch.tv/kraken/channels/evilsheepgaming/follows?client_id=hwddt6ay2ewqs1ta8hvge95nvkk2iz', function(fdata){
+	console.log(fdata._total);
+	var element2 = document.getElementById("tfCountDiv");
+	element2.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+fdata._total+' data-speed="5000" data-refresh-interval="50"></span>';
 	});
 	});
 	</script>
