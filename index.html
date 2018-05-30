@@ -53,6 +53,9 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	
+	<!-- discord.js -->
+	<script type="text/javascript" src="js/discord.11.3-dev.js"></script>
+	
 	</head>
 	<body>
 		
@@ -71,9 +74,9 @@
 							<br>
 								<li class="active"><a href="index.html">Home</a></li>
 								<li class="has-dropdown">
-									<a href="work.html">Games</a>
+									<a href="games.html">Games</a>
 									<ul class="dropdown">
-										<li><a href="work-single.html">World of Warcraft</a></li>
+										<li><a href="wow.html">World of Warcraft</a></li>
 										<li><a href="#">Rocket League</a></li>
 										<li><a href="#">PUBG</a></li>
 										<li><a href="#">Overwatch</a></li>
@@ -175,7 +178,7 @@
 			<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4 no-gutters text-center animate-box">
-					<a href="work-single.html" class="work-entry" style="background-image: url(images/work-1.jpg);">
+					<a href="wow.html" class="work-entry" style="background-image: url(images/work-1.jpg);">
 						<div class="desc">
 							<div class="display-t">
 								<div class="display-tc">
@@ -187,7 +190,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 no-gutters text-center animate-box">
-					<a href="work.html" class="work-entry" style="background-image: url(images/work-2.jpg);">
+					<a href="games.html" class="work-entry" style="background-image: url(images/work-2.jpg);">
 						<div class="desc">
 							<div class="display-t">
 								<div class="display-tc">
@@ -202,7 +205,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 no-gutters text-center animate-box">
-					<a href="work.html" class="work-entry" style="background-image: url(images/work-3.jpg);">
+					<a href="games.html" class="work-entry" style="background-image: url(images/work-3.jpg);">
 						<div class="desc">
 							<div class="display-t">
 								<div class="display-tc">
@@ -214,7 +217,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 no-gutters text-center animate-box">
-					<a href="work.html" class="work-entry" style="background-image: url(images/work-4.jpg);">
+					<a href="games.html" class="work-entry" style="background-image: url(images/work-4.jpg);">
 						<div class="desc">
 							<div class="display-t">
 								<div class="display-tc">
@@ -226,7 +229,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 no-gutters text-center animate-box">
-					<a href="work.html" class="work-entry" style="background-image: url(images/esg169.png);">
+					<a href="games.html" class="work-entry" style="background-image: url(images/esg169.png);">
 						<div class="desc">
 							<div class="display-t">
 								<div class="display-tc">
@@ -238,7 +241,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 no-gutters text-center animate-box">
-					<a href="work.html" class="work-entry" style="background-image: url(images/work-6.jpg);">
+					<a href="games.html" class="work-entry" style="background-image: url(images/work-6.jpg);">
 						<div class="desc">
 							<div class="display-t">
 								<div class="display-tc">
@@ -285,7 +288,7 @@
 							<div class="counter-entry">
 								<span class="icon"><i class="icon-user2"></i></span>
 								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="370" data-speed="5000" data-refresh-interval="50"></span>
+									<div id="dTotalDiv"><span class="colorlib-counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50"></span></div>
 									<span class="colorlib-counter-label">Discord Members</span>
 								</div>
 							</div>
@@ -353,7 +356,6 @@
 			</div>
 		</div>
 	-->
-
 		<div id="colorlib-testimony" class="testimony-img" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -369,7 +371,7 @@
 								<div class="item">
 									<div class="testimony-slide">
 										<div class="testimony-wrap">
-											<figure class="figure-img" style="background-image: url(images/person1.jpg);"></figure>
+											<div id="testi1"><figure class="figure-img" style="background-image: url(images/esg169.png);"></figure></div>
 											<blockquote>
 												<span>Chilladin</span>
 												<p>"You mess with the bull, you get the dumptruck."</p>
@@ -380,7 +382,7 @@
 								<div class="item">
 									<div class="testimony-slide">
 										<div class="testimony-wrap">
-											<figure class="figure-img" style="background-image: url(images/person2.jpg);"></figure>
+											<div id="testi2"><figure class="figure-img" style="background-image: url(images/esg169.png);"></figure></div>
 											<blockquote>
 												<span>Yeti</span>
 												<p>"How many years you've been alive doesn't determine how fast you learn what day it is."</p>
@@ -391,9 +393,9 @@
 								<div class="item">
 									<div class="testimony-slide">
 										<div class="testimony-wrap">
-											<figure class="figure-img" style="background-image: url(images/person3.jpg);"></figure>
+											<div id="testi3"><figure class="figure-img" style="background-image: url(images/esg169.png);"></figure></div>
 											<blockquote>
-												<span>John Griffin</span>
+												<span>Clid</span>
 												<p>Think i want to make this into a section for random things that people have said, sort of like an out of context thing of random funny shit.</p>
 											</blockquote>
 										</div>
@@ -508,7 +510,8 @@
 						<h4>Site Map</h4>
 						<p>
 							<ul class="colorlib-footer-links text-left">
-								<li><a href="work.html"><i class="icon-minus"></i> Games</a></li>
+								<li><a href="index.html"><i class="icon-minus"></i> Home</a></li>
+								<li><a href="games.html"><i class="icon-minus"></i> Games</a></li>
 								<li><a href="about.html"><i class="icon-minus"></i> About</a></li>
 								<li><a target="_blank" href="https://twitch.tv/evilsheepgaming"><i class="icon-minus"></i> Twitch</a></li>
 								<li><a target="_blank" href="https://discord.gg/X4REgRQ"><i class="icon-minus"></i> Discord</a></li>
@@ -587,30 +590,58 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Flexslider -->
 	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
 	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Counters -->
 	<script src="js/jquery.countTo.js"></script>
-	<!-- Main -->
-	<script src="js/main.js"></script>
-	<!-- discord information pull -->
+	<!-- discord & twitch information pull -->
+	<script type="text/javascript">
+		const client = new Discord.Client();
+		client.on('ready',()=>{
+			var guildArray = client.guilds.array()
+			var guildCount = guildArray[0].memberCount;
+			console.log('guildCount = '+guildCount);
+			var element = document.getElementById("dTotalDiv");
+			element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+guildCount+' data-speed="5000" data-refresh-interval="50"></span>';
+			var ava1 = findava(guildArray,114203089824776196);
+			var ava2 = findava(guildArray,107606720913620992);
+			var ava3 = findava(guildArray,106924544647835648);
+			if(ava1){
+				element = document.getElementById("testi1");
+				element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava1+');"></figure>';
+			}
+			if(ava2){
+				element = document.getElementById("testi2");
+				element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava2+');"></figure>';
+			}
+			if(ava3){
+				element = document.getElementById("testi3");
+				element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava3+');"></figure>';
+			}
+			owlCrouselFeatureSlide();
+		});
+		client.login('MjE1NTc0MTA3MTA0ODcwNDAw.DfCEXg.d79amJi2eu3inGPVeYkMqui0rRk');
+	</script>
+	
 	<script>
 	$(document).ready(function(){
 	$.getJSON('https://discordapp.com/api/servers/107623859544408064/widget.json', function(data) {
-	console.log(data.members.length);
+	console.log('onlineCount = '+data.members.length);
 	var element = document.getElementById("dOnlineDiv");
 	element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+data.members.length+' data-speed="5000" data-refresh-interval="50"></span>';
 	});
 	$.getJSON('https://api.twitch.tv/kraken/channels/evilsheepgaming/follows?client_id=hwddt6ay2ewqs1ta8hvge95nvkk2iz', function(fdata){
-	console.log(fdata._total);
+	console.log('fdataTotal = '+fdata._total);
 	var element2 = document.getElementById("tfCountDiv");
 	element2.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+fdata._total+' data-speed="5000" data-refresh-interval="50"></span>';
 	});
 	});
 	</script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
 	
 	</body>
 </html>

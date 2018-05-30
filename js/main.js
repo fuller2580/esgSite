@@ -254,13 +254,28 @@
 			});
 		}
 	};
+	
+	$(function(){
+		mobileMenuOutsideClick();
+		offcanvasMenu();
+		burgerMenu();
+		contentWayPoint();
+		sliderMain();
+		dropdown();
+		goToTop();
+		loaderPage();
+		counter();
+		counterWayPoint();
+		parallax();
+	});
 
-	// Owl Carousel
-	var owlCrouselFeatureSlide = function() {
+
+}());
+
+// Owl Carousel
+	function owlCrouselFeatureSlide() {
 		var owl = $('.owl-carousel1');
 		owl.owlCarousel({
-			animateOut: 'fadeOut',
-		   animateIn: 'fadeIn',
 			autoplay: true,
 			items: 1,
 		   loop: true,
@@ -291,20 +306,20 @@
 		owl2.owlCarousel({
 		   loop: true,
 		   margin: 30,
-		   nav: true,
+		   nav: false,
 		   dots: false,
 		   autoplay: true,
-		   autoplayHoverPause: true,
+		   autoplayHoverPause: false,
 		   smartSpeed: 500,
 		   responsive:{
 		      0:{
 		         items:1
 		      },
 	         600:{
-		         items:2
+		         items:1
 		      },
 		      1000:{
-		         items:3
+		         items:1
 		      }
 		   },
 		   navText: [
@@ -312,24 +327,22 @@
 		      "<i class='icon-arrow-right3 owl-direction'></i>"
 	     	]
 		});
-
+	owl.trigger('refresh.owl.carousel');
 	};
 
-	
-	$(function(){
-		mobileMenuOutsideClick();
-		offcanvasMenu();
-		burgerMenu();
-		contentWayPoint();
-		sliderMain();
-		dropdown();
-		goToTop();
-		loaderPage();
-		counter();
-		counterWayPoint();
-		parallax();
-		owlCrouselFeatureSlide();
-	});
-
-
-}());
+function findava(guildArray,userID){
+	var avaURL = 0;
+	var ind = 0;
+	var indFound = false;
+	var membersArray = guildArray[0].members.array()
+	do{
+		if(membersArray[ind].id == userID){
+		indFound = true;
+		avaURL=(membersArray[ind].user.avatarURL);
+		/*console.log(avaURL);*/
+		}
+		else{ if(ind> 10000){indFound = true; console.log('ava not found');}else {ind += 1;}}
+	}
+	while(indFound != true);
+	return avaURL;
+}
