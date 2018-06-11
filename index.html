@@ -390,19 +390,28 @@
 										</div>
 									</div>
 								</div>
-								<!--
 								<div class="item">
 									<div class="testimony-slide">
 										<div class="testimony-wrap">
 											<div id="testi3"><figure class="figure-img" style="background-image: url(images/esg169.png);"></figure></div>
 											<blockquote>
-												<span>Clid</span>
-												<p>Think i want to make this into a section for random things that people have said, sort of like an out of context thing of random funny shit.</p>
+												<span>Hoid</span>
+												<p>"Oh for crying in a basket."</p>
 											</blockquote>
 										</div>
 									</div>
 								</div>
-								-->
+								<div class="item">
+									<div class="testimony-slide">
+										<div class="testimony-wrap">
+											<div id="testi4"><figure class="figure-img" style="background-image: url(images/esg169.png);"></figure></div>
+											<blockquote>
+												<span>Eighthwonder</span>
+												<p>"Alright we don't pull this next boss unless everyone has a beer in their hand, and if you're underage go grab a juice box."</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -607,7 +616,8 @@
 			element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+guildCount+' data-speed="5000" data-refresh-interval="50"></span>';
 			var ava1 = findava(guildArray,114203089824776196);
 			var ava2 = findava(guildArray,107606720913620992);
-			var ava3 = findava(guildArray,106924544647835648);
+			var ava3 = findava(guildArray,232879751600144384);
+			var ava4 = findava(guildArray,107341964839567360);
 			if(ava1){
 				element = document.getElementById("testi1");
 				element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava1+');"></figure>';
@@ -619,6 +629,13 @@
 			if(ava3){
 				element = null
 				element = document.getElementById("testi3");
+				if(element != null){
+					element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava3+');"></figure>';
+				}
+			}
+			if(ava4){
+				element = null
+				element = document.getElementById("testi4");
 				if(element != null){
 					element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava3+');"></figure>';
 				}
