@@ -134,8 +134,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-						<h2>IDK what to put for this thing.</h2>
-						<p>Click through the site! Things are quickly approaching a finalized state, any feedback would be a huge help. Not Finished: pubg, overwatch, all the games, dead by daylight, about us<br>- clid</p>
+						<h2>Welcome to Evil Sheep Gaming!</h2>
+						<p>Many things are a work in progress here. Sorry for the delay.
+						<br>If you have any awesome Sheepling Moments make sure to submit them!
+						<br>- clid</p>
 					</div>
 				</div>
 				<div class="row">
@@ -615,8 +617,11 @@
 				element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava2+');"></figure>';
 			}
 			if(ava3){
+				element = null
 				element = document.getElementById("testi3");
-				element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava3+');"></figure>';
+				if(element != null){
+					element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava3+');"></figure>';
+				}
 			}
 			owlCrouselFeatureSlide();
 		});
