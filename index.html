@@ -412,6 +412,28 @@
 										</div>
 									</div>
 								</div>
+								<div class="item">
+									<div class="testimony-slide">
+										<div class="testimony-wrap">
+											<div id="testi5"><figure class="figure-img" style="background-image: url(images/esg169.png);"></figure></div>
+											<blockquote>
+												<span>Ferd</span>
+												<p>"@Clid this website doesnt seem to have an ad for local singles in my area."</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="testimony-slide">
+										<div class="testimony-wrap">
+											<div id="testi6"><figure class="figure-img" style="background-image: url(images/esg169.png);"></figure></div>
+											<blockquote>
+												<span>Eighthwonder</span>
+												<p>"@Ferd you ever consider that YOU are the local single in your area?"</p>
+											</blockquote>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -618,6 +640,8 @@
 			var ava2 = findava(guildArray,107606720913620992);
 			var ava3 = findava(guildArray,232879751600144384);
 			var ava4 = findava(guildArray,107341964839567360);
+			var ava5 = findava(guildArray,134766998864265216);
+			var ava6 = findava(guildArray,107341964839567360);
 			if(ava1){
 				element = document.getElementById("testi1");
 				element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava1+');"></figure>';
@@ -638,6 +662,20 @@
 				element = document.getElementById("testi4");
 				if(element != null){
 					element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava4+');"></figure>';
+				}
+			}
+			if(ava5){
+				element = null
+				element = document.getElementById("testi5");
+				if(element != null){
+					element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava5+');"></figure>';
+				}
+			}
+			if(ava6){
+				element = null
+				element = document.getElementById("testi6");
+				if(element != null){
+					element.innerHTML = '<figure class="figure-img" style="background-image: url('+ava6+');"></figure>';
 				}
 			}
 			owlCrouselFeatureSlide();
