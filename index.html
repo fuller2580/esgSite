@@ -87,7 +87,7 @@
 								<li class="has-dropdown">
 									<a target="_blank" href="https://streamlabs.com/evilsheepgaming/#/merch">Shop</a>
 									<ul class="dropdown">
-										<li><a target="_blank" href="https://displate.com/displate/780208?art=5c2cd12868cc4"> Displate </a></li>
+										<li><a target="_blank" href="https://displate.com/displate/1008523?art=5c2cd12868cc4"> Displate </a></li>
 										<li><a target="_blank" href="https://streamlabs.com/evilsheepgaming/#/merch"> Merch </a></li>
 									</ul>
 								</li>
@@ -141,8 +141,8 @@
 								<img src="images/img_bg_1.jpg"/>
 						   		<div class="overlay"></div>
 						   	</li>
-						   	<li>
-								<img src="images/img_bg_2.jpg"/>
+							<li>
+								<img src="images/dbd2.png"/>
 						   		<div class="overlay"></div>
 						   	</li>
 							<li>
@@ -150,7 +150,7 @@
 						   		<div class="overlay"></div>
 						   	</li>
 							<li>
-								<img src="images/img_bg_4.jpg"/>
+								<img src="images/img_bg_2.jpg"/>
 						   		<div class="overlay"></div>
 						   	</li>
 						  	</ul>
@@ -166,7 +166,7 @@
 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
 						<h2>Welcome to Evil Sheep Gaming!</h2>
 						<p>We just launched our merch store! Check it out for some <a target="_blank" href="https://streamlabs.com/evilsheepgaming/#/merch">ESG Swag!</a>
-						<br>Beep beep you're sheep.</p>
+						<br>Beep beep you're a sheep.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -818,7 +818,9 @@
 	var element = document.getElementById("dOnlineDiv");
 	element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+data.members.length+' data-speed="5000" data-refresh-interval="50"></span>';
 	});
-	$.getJSON('https://api.twitch.tv/kraken/channels/evilsheepgaming/follows?client_id=hwddt6ay2ewqs1ta8hvge95nvkk2iz', function(fdata){
+	<!--$.getJSON('https://api.twitch.tv/kraken/channels/evilsheepgaming/follows?client_id=hwddt6ay2ewqs1ta8hvge95nvkk2iz', function(fdata){
+	-->
+	$.getJSON('https://api.twitch.tv/kraken/channels/150140095/follows?client_id=hwddt6ay2ewqs1ta8hvge95nvkk2iz&api_version=5', function(fdata){
 	console.log('fdataTotal = '+fdata._total);
 	var element2 = document.getElementById("tfCountDiv");
 	element2.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+fdata._total+' data-speed="5000" data-refresh-interval="50"></span>';
