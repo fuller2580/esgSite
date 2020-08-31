@@ -6,18 +6,18 @@
 	<title>Evil Sheep Gaming: Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+	<meta name="keywords" content="evil sheep gaming, gaming, evil sheep, gaming communities, clid, chilladin, streamers, discord communities" />
+	<meta name="author" content="Clid" />
 
   <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
+	<meta property="og:title" content="Evil Sheep Gaming"/>
+	<meta property="og:image" content="http://www.evilsheepgaming.com/images/evilsheepscaling.png"/>
+	<meta property="og:url" content="http://www.evilsheepgaming.com/"/>
 	<meta property="og:site_name" content=""/>
 	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
+	<meta name="twitter:title" content="Evil Sheep Gaming" />
+	<meta name="twitter:image" content="http://www.evilsheepgaming.com/images/evilsheepscaling.png" />
+	<meta name="twitter:url" content="http://www.evilsheepgaming.com/" />
 	<meta name="twitter:card" content="" />
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700,900" rel="stylesheet">
@@ -331,7 +331,7 @@
 							<div class="counter-entry">
 								<span class="icon"><i class="icon-user2"></i></span>
 								<div class="desc">
-									<div id="dTotalDiv"><span class="colorlib-counter js-counter" data-from="0" data-to="693" data-speed="5000" data-refresh-interval="50"></span></div>
+									<div id="dTotalDiv"><span class="colorlib-counter js-counter" data-from="0" data-to="718" data-speed="5000" data-refresh-interval="50"></span></div>
 									<span class="colorlib-counter-label">Discord Members</span>
 								</div>
 							</div>
@@ -481,7 +481,7 @@
 								<div class="item">
 									<div class="testimony-slide">
 										<div class="testimony-wrap">
-											<div id="testi7"><figure class="figure-img" style="background-image: url(https://cdn.discordapp.com/avatars/215185797744164864/dc980751b12bc4baa650c51d18ade469.png);"></figure></div>
+											<div id="testi7"><figure class="figure-img" style="background-image: url(https://cdn.discordapp.com/avatars/215185797744164864/0c1fa1e0507bbd3a47656315308429ac.png);"></figure></div>
 											<blockquote>
 												<span>Shiggs</span>
 												<p>"Mmmm, Hey Dahlara..."</p>
@@ -492,7 +492,7 @@
 								<div class="item">
 									<div class="testimony-slide">
 										<div class="testimony-wrap">
-											<div id="testi8"><figure class="figure-img" style="background-image: url(https://cdn.discordapp.com/avatars/268465827735404544/f6cb3c50e382eed45b1ca94a2f3fce6b.png);"></figure></div>
+											<div id="testi8"><figure class="figure-img" style="background-image: url(https://cdn.discordapp.com/avatars/268465827735404544/58ce7e6fc94d01852e9ca18c368e873b.png);"></figure></div>
 											<blockquote>
 												<span>Dahlara</span>
 												<p>"You can't see me!"</p>
@@ -503,7 +503,7 @@
 								<div class="item">
 									<div class="testimony-slide">
 										<div class="testimony-wrap">
-											<div id="testi9"><figure class="figure-img" style="background-image: url(https://cdn.discordapp.com/avatars/139583845941903361/c40a76a961a52b5316e28bf31b0000fe.png);"></figure></div>
+											<div id="testi9"><figure class="figure-img" style="background-image: url(https://cdn.discordapp.com/avatars/139583845941903361/fcab355ae38b0cc6c53665f90c337e6c.png);"></figure></div>
 											<blockquote>
 												<span>Zyerra</span>
 												<p>"Beep beep mom's spaghetti"</p>
@@ -721,7 +721,8 @@
 		
 		######## CURRENTLY BROKEN, NEED WAY TO HIDE CLIENT LOGIN TOKEN ########
 		######## member photos and total discord count will not update ########
-		
+	-->	
+	<!--
 	<script type="text/javascript">
 		const client = new Discord.Client();
 		client.on('ready',()=>{
@@ -824,9 +825,9 @@
 	<script>
 	$(document).ready(function(){
 	$.getJSON('https://discordapp.com/api/servers/107623859544408064/widget.json', function(data) {
-	console.log('onlineCount = '+data.members.length);
+	console.log('onlineCount = '+data.presence_count);
 	var element = document.getElementById("dOnlineDiv");
-	element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+data.members.length+' data-speed="5000" data-refresh-interval="50"></span>';
+	element.innerHTML ='<span class="colorlib-counter js-counter" data-from="0" data-to='+data.presence_count+' data-speed="5000" data-refresh-interval="50"></span>';
 	});
 	<!--$.getJSON('https://api.twitch.tv/kraken/channels/evilsheepgaming/follows?client_id=hwddt6ay2ewqs1ta8hvge95nvkk2iz', function(fdata){
 	-->
